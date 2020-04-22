@@ -72,7 +72,7 @@ Hints and Notes:
 - Choose a good color scheme.
 - Your submission is supposed to be fully reproducible, i.e. the TA and I will 'knit' your submission in RStudio. 
 ```{r}
-ggplot(data,aes(x=score,y=-popularity,color=category,size=reorder(size,desc(size)),shape=intelligence))+geom_point(alpha=.8)+labs(y="popularity", title="Best in Show: The Ultimate Data Dog")+ geom_text(aes(label=`breed`),size=2,vjust = -.5, nudge_y = 2)+
+ggplot(data,aes(x=score,y=-popularity,color=category,size=reorder(size,desc(size)),shape=intelligence))+geom_point(alpha=.8)+labs(y="popularity", title="Best in Show: The Ultimate Data Dog",size="size")+ geom_text(aes(label=`breed`),size=2,vjust = -.5, nudge_y = 2)+
   geom_vline(xintercept = 2.33)+geom_hline(yintercept = -75)+ 
   annotate("text",x=1.3,y=10,label="Inexplicably Overrated")+
   annotate("text",x=3.5,y=10,label="Hot Dogs!")+
